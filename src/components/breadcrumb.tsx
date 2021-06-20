@@ -3,9 +3,9 @@ import { makeStyles, Theme, createStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Breadcrumbs from '@material-ui/core/Breadcrumbs';
 import Link from '@material-ui/core/Link';
-import PeopleIcon from '@material-ui/icons/People';
+import FileCopyIcon from '@material-ui/icons/FileCopy';
 import HomeIcon from '@material-ui/icons/Home';
-import LocalBarIcon from '@material-ui/icons/LocalBar';
+import DescriptionIcon from '@material-ui/icons/Description';
 import GrainIcon from '@material-ui/icons/Grain';
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -31,9 +31,9 @@ export default function IconBreadcrumbs() {
 
   return (
     <Breadcrumbs aria-label="breadcrumb">
-      <Link color="inherit" href="/" onClick={handleClick} className={classes.link}>
+      {/* <Link color="inherit" href="/" onClick={handleClick} className={classes.link}>
         <HomeIcon className={classes.icon} />
-        Dashboard
+        C++
       </Link>
       <Link
         color="inherit"
@@ -41,12 +41,12 @@ export default function IconBreadcrumbs() {
         onClick={handleClick}
         className={classes.link}
       >
-        <PeopleIcon className={classes.icon} />
-        Users
-      </Link>
+        <FileCopyIcon className={classes.icon} />
+        HelloWorld.cpp
+      </Link> */}
       <Typography color="textPrimary" className={classes.link}>
-        <LocalBarIcon className={classes.icon} />
-        On Leave
+        <DescriptionIcon className={classes.icon} />
+        repl.cpp
       </Typography>
     </Breadcrumbs>
   );

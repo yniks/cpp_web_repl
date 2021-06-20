@@ -13,6 +13,7 @@ import SpeakerNotesIcon from '@material-ui/icons/SpeakerNotes';
 import MoreIcon from '@material-ui/icons/MoreVert';
 import SettingsApplicationsIcon from '@material-ui/icons/SettingsApplications';
 import BreadCrumbs from './breadcrumb'
+import ArrowForwardIosSharp from '@material-ui/icons/ArrowForwardIosSharp';
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root:{
@@ -53,7 +54,8 @@ const useStyles = makeStyles((theme: Theme) =>
       },
     },
     toolbar:{ 
-      borderRadius:theme.shape.borderRadius
+      borderRadius:theme.shape.borderRadius,
+      backgroundColor:'rgba(0,0,0,0.8)'//,backdropFilter: 'hue-rotate(297deg'
        }
   }),
 );
@@ -150,10 +152,10 @@ export default function TopBar() {
             color="inherit"
             aria-label="open drawer"
           >
-            <BusinessIcon ></BusinessIcon>
+            <ArrowForwardIosSharp ></ArrowForwardIosSharp>
           </IconButton>
           <Typography className={classes.title} variant="h6" noWrap>
-            The Inventory
+            C++ Interpreter
           </Typography>
           <div className={classes.breadcrumb}>
             <BreadCrumbs></BreadCrumbs>

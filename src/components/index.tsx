@@ -1,3 +1,4 @@
+// @ts-nocheck
 import {
   AppBar,
   Box,
@@ -19,6 +20,7 @@ import TopBar from "./topbar";
 import wallaper from "../resources/polygon.jpg";
 import loader from "../resources/1497.gif";
 import VerticalTabs from "./verticalTabs";
+import Terminal from "./grid"
 const theme = createMuiTheme({
   palette: {
     type: "dark",
@@ -46,6 +48,14 @@ const useStyles = makeStyles({
     height: "100%",
   },
 });
+
+const commands={
+  alert:{
+    fn:function(){
+      alert("h")
+    }
+  }
+}
 function RootLayout() {
   const classes = useStyles();
   return (
@@ -54,16 +64,22 @@ function RootLayout() {
         <MainGrid
           header={<TopBar></TopBar>}
           body={
-            <Box style={{display:'grid',placeItems:'center'}}>
-              <CircularProgress color="secondary" />
-              -
-              <Typography>Under Construction</Typography>
-            </Box>
+            <Terminal
+          commands={commands}
+          welcomeMessage="Hi"
+          dangerMode
+            />
           }
-          sidebar={<VerticalTabs></VerticalTabs>}
         />
       </CssBaseline>
     </ThemeProvider>
   );
 }
 export default RootLayout;
+/*
+<Box style={{display:'grid',placeItems:'center'}}>
+              <CircularProgress color="secondary" />
+              -
+              <Typography>Under Construction</Typography>
+            </Box>
+*/
