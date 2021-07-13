@@ -1,5 +1,5 @@
 {
-  "name": "admin-portal",
+  "name": "terminal-emulator",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -14,7 +14,10 @@
     "@types/react": "^17.0.9",
     "@types/react-dom": "^17.0.6",
     "classnames": "^2.3.1",
+    "highlight.js": "^11.0.1",
+    "javascript-terminal": "^1.1.1",
     "react": "^17.0.2",
+    "react-console-emulator": "^5.0.1",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
     "typescript": "^4.3.2",

@@ -9,5 +9,4 @@ function App() {
     </Button>
   );
 }
-
 export default Screen;
