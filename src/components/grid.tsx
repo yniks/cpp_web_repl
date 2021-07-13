@@ -62,7 +62,7 @@ export default function TTerminal() {
       return
       try{
         // var terminal=termref.current
-          var result=await (fetch('http://localhost:8000/run',
+          var result=await (fetch('/run',
               {method:'post',
               headers:{'content-type':'application/json'},
               body:JSON.stringify({code:arg.rawInput})}));
